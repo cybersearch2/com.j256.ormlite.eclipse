@@ -8,7 +8,6 @@
         <relativePath>./releng/ormlite.configuration</relativePath>
     </parent>
     <artifactId>ormlite.root</artifactId>
-    <version>5.1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 	<name>ORMLite Eclipse</name>
     <description>OrmLite Core and Jdbc packed into an Eclipse plug-in</description>
@@ -33,8 +32,6 @@
 			</roles>
 			<timezone>-5</timezone>
 		</developer>
-	</developers>
-	<developers>
 		<developer>
 			<id>bowley</id>
 			<name>Andrew Bowley</name>
