@@ -1,0 +1,1 @@
+mvn clean install -Djava.execution.vendor=oracle -Djava.execution.version=1.8 -Dmaven.compiler.compilerVersion=1.8 -Dmaven.compiler.source=1.8 -Dmaven.compiler.target=1.8

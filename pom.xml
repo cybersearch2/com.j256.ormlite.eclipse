@@ -1,0 +1,57 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.j256.ormlite</groupId>
+        <artifactId>ormlite.configuration</artifactId>
+        <version>5.1.0-SNAPSHOT</version>
+        <relativePath>./releng/ormlite.configuration</relativePath>
+    </parent>
+    <artifactId>ormlite.root</artifactId>
+    <version>5.1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+	<name>ORMLite Eclipse</name>
+    <description>OrmLite Core and Jdbc packed into an Eclipse plug-in</description>
+
+	<licenses>
+		<license>
+			<name>ISC License</name>
+			<url>http://ormlite.com/docs/license</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+	<developers>
+		<developer>
+			<id>gray</id>
+			<name>Gray Watson</name>
+			<url>http://256.com/gray/</url>
+			<organization>256.com</organization>
+			<organizationUrl>http://256.com/</organizationUrl>
+			<roles>
+				<role>architect</role>
+				<role>developer</role>
+			</roles>
+			<timezone>-5</timezone>
+		</developer>
+	</developers>
+	<developers>
+		<developer>
+			<id>bowley</id>
+			<name>Andrew Bowley</name>
+			<url>http://cybersearch2.com.au/classy_tools/home.html</url>
+			<organization>Cybersearch2 Pty Ltd</organization>
+			<organizationUrl>http://cybersearch2.com.au/</organizationUrl>
+			<roles>
+				<role>architect</role>
+				<role>developer</role>
+			</roles>
+			<timezone>11</timezone>
+		</developer>
+	</developers>
+
+   <modules>
+       <module>bundle</module>
+       <module>feature</module> 
+       <module>releng</module>
+   </modules>
+</project>

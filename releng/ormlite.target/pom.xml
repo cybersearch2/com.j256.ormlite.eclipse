@@ -1,0 +1,14 @@
+<project>
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.j256.ormlite</groupId>
+        <artifactId>ormlite.releng</artifactId>
+        <version>5.1.0-SNAPSHOT</version>
+    </parent>
+    <groupId>com.j256.ormlite</groupId>
+    <artifactId>ormlite.target</artifactId>
+    <version>5.1.0-SNAPSHOT</version>
+    <packaging>eclipse-target-definition</packaging>
+
+</project>
+

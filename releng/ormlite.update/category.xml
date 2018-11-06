@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/com.j256.ormlite.feature_5.1.0.qualifier.jar" id="com.j256.ormlite.feature"  version="0.0.0" patch="false">
+      <category name="Ormlite 5.1"/>
+   </feature>
+   <category-def name="Ormlite 5.1" label="ORMLite 5.1"/>
+</site>
