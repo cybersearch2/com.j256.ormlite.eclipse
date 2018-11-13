@@ -1,24 +1,20 @@
 ORMLite Eclipse Plug-in
 =======================
 
-This project combines ORMLite Core and JDBC packages into a Eclipse Platfom component called a "plug-in" or "bundle" - the terms are interchangeable. 
-The initiative for creating the ORMLite Eclipse Plug-in comes from the decision to employ the "Classy Data" Lightweight Java Persistence Architecture (JPA) 
-library in an Eclipse Android Development Tools (ADT) revival. Classy Data provides a minimal JPA implementation on top of ORMLite. Both Classy Data and ORMLite 
-share the same lightweight, standard-Java-only ethos which makes them good candidates for Eclipse modularization. To find out more about ORMLite, go to 
-[j256/ormlite-core](https://github.com/j256/ormlite-core), and for Classy Data go to [here](http://cybersearch2.com.au/develop/classydata.html).
+This project compiles [ORMLite Core](https://github.com/j256/ormlite-core) and [JDBC](https://github.com/j256/ormlite-jdbc) packages into a single Eclipse plug-in 
+and creates a P2 repository to publish it as the "Ormlite 5.1" feature. 
+The ORMLite Eclipse Plug-in is the key component of the [Classy Data Lightweight JPA](http://cybersearch2.com.au/develop/classydata.html) library bieng applied to 
+an Android Development IDE to persist project configurations. Classy Data is a minimal JPA implementation layered over the top of ORMLite. Both Classy Data and ORMLite 
+are good candidates for Eclipse modularization as they share the same lightweight, standard-Java-only ethos.
 
-
-It is important to note that the ORMLite Eclipse Plug-in on it's own is not going to work as intended when discovering classes to be persisted because 
-of the way access to classes in other plugins is restricted by the operation of a standard application interface. You can find out more in 
-the Vogella [OSGi Modularity - Tutorial](http://www.vogella.com/tutorials/OSGi/article.html). Classy Data overcomes this problem by having entity classes 
-declared in a peristence XML configuration file and using a class loader provided by it's client to instantiate them.
-
+Any application of the ORMLite Eclipse Plug-in needs to adapt to a standard application interface which applies to all plug-ins. You can find out more in 
+the Vogella [OSGi Modularity - Tutorial](http://www.vogella.com/tutorials/OSGi/article.html). This restricts access to classes from one plug-in to other plugins
+and prevents discovery of classes to be persisted as implemented in ORMLite. Classy Data overcomes this problem by having entity classes declared in a peristence 
+XML configuration file and using a class loader provided by it's client to instantiate them.
 
 Another consideration is that the number of database drivers available on [Orbit](http://download.eclipse.org/tools/orbit/downloads/drops/R20180829150157), 
-the Eclipse plug-in repository is limited to h2 (org.h2 v1.3.168) and derby (org.apache.derby v10.11.1.1). As h2 is well-known, it is included in the 
-ORMLite Eclipse Plug-in dependencies. However, the Sqlite JDBC driver v3.8.5-pre1 from org.xerial is also added as a jar to the build so an Sqlite database
-option is available. This is because it is purposefully lightweight and also familiar to Android developers. One other featue of Sqlite exploited by
-Classy Data is Sqlite natively supports updating database versions.
+the Eclipse plug-in repository is limited to h2 (org.h2 v1.3.168) and derby (org.apache.derby v10.11.1.1). As h2 is probaly better known, it is included in the 
+ORMLite Eclipse Plug-in dependencies and selected as the database to be used by the Classy Data plugin. 
 
 ## Usage in Classy Data
 

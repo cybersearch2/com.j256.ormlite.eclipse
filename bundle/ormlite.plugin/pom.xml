@@ -32,11 +32,6 @@
           <version>5.1</version>
           <classifier>sources</classifier>
         </dependency>
-        <dependency>
-          <groupId>org.xerial</groupId>
-          <artifactId>sqlite-jdbc</artifactId>
-          <version>3.8.5-pre1</version>
-        </dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
@@ -87,7 +82,20 @@
 	<!-- plain surefire tests without tycho -->
 	<testSourceDirectory>${basedir}/test-src</testSourceDirectory>
     <plugins>
-      <plugin>
+ 	<plugin>
+		<groupId>org.eclipse.tycho</groupId>
+		<artifactId>tycho-source-plugin</artifactId>
+		<version>${tycho.version}</version>
+		<executions>
+			<execution>
+				<id>plugin-source</id>
+				<goals>
+					<goal>plugin-source</goal>
+				</goals>
+			</execution>
+		</executions>
+	</plugin>
+    <plugin>
         <artifactId>maven-dependency-plugin</artifactId>
         <executions>
           <execution>
@@ -134,11 +142,6 @@
                 <artifactItem>
                 </artifactItem>
                 -->
- 		        <artifactItem>
-		          <groupId>org.xerial</groupId>
-		          <artifactId>sqlite-jdbc</artifactId>
-		          <version>3.8.5-pre1</version>
-		        </artifactItem>
                 <artifactItem> 
                   <groupId>org.hibernate.javax.persistence</groupId>
                   <artifactId>hibernate-jpa-2.0-api</artifactId>

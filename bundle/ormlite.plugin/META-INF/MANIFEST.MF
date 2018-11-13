@@ -6,11 +6,11 @@ Bundle-Version: 5.1.0.qualifier
 Bundle-Vendor: 256.com
 Require-Bundle: org.apache.log4j;bundle-version="1.2.15",
  org.slf4j.api;bundle-version="1.7.2",
- org.apache.commons.logging;bundle-version="1.1.1"
+ org.apache.commons.logging;bundle-version="1.1.1",
+ org.h2
 Bundle-ActivationPolicy: lazy
 Bundle-ClassPath: .,
  libs/hibernate-jpa-2.0-api-1.0.1.Final.jar,
- libs/sqlite-jdbc-3.8.5-pre1.jar,
  libs/log4j-api-2.0-beta4.jar
 Export-Package: com.j256.ormlite.dao,
  com.j256.ormlite.db,
@@ -28,12 +28,6 @@ Export-Package: com.j256.ormlite.dao,
  javax.persistence,
  javax.persistence.criteria,
  javax.persistence.metamodel,
- javax.persistence.spi,
- org.sqlite,
- org.sqlite.core,
- org.sqlite.javax,
- org.sqlite.jdbc3,
- org.sqlite.jdbc4,
- org.sqlite.util
+ javax.persistence.spi
 Require-Capability: osgi.ee; filter:="(|(&(osgi.ee=JavaSE)(version=1.8))(&(osgi.ee=JavaSE)(version=9)))"
 Automatic-Module-Name: com.j256.ormlite.eclipse;
